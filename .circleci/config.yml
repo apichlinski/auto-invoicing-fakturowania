@@ -9,5 +9,9 @@ jobs:
           name: Generate invoice
           command: echo $API_TOKEN
     
+workflows:
+  build_and_test: # name of your workflow
+    jobs:
+      - run-script
        
       
