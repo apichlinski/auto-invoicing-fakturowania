@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: Generate invoice
-          command: $pwr
+          command: $PWD
     
 workflows:
   build_and_test: # name of your workflow
