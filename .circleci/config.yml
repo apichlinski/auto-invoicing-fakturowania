@@ -1,5 +1,5 @@
 version: 2.1
-commands:
+jobs:
   run-script:
     parameters:
       YOUR_DOMAIN:
@@ -18,6 +18,12 @@ commands:
         description: Fakturownia.pl - your product name
         type: string
         default: Usługi informatyczne %s - 160 godzin
+
     steps:
       - run: echo "start"
       - run: echo parameters.YOUR_DOMAIN
+
+workflows:
+  workflow:
+    jobs:
+      - run-script
