@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Generate invoice
-          command: $PWD
+          command: ./create-fv.sh
     
 workflows:
   build_and_test: # name of your workflow
