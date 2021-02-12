@@ -1,29 +1,11 @@
 version: 2.1
+
 jobs:
-  run-script:
-    parameters:
-      YOUR_DOMAIN:
-        description: Fakturownia.pl - your domain
-        type: string
-        default: XXXXXXXXXXXXXXXX/your-domain
-      CLIENT_ID:
-        description: Fakturownia.pl - your client id
-        type: integer
-        default: 40000000  
-      PRODUCT_ID:
-        description: Fakturownia.pl - your pruduct id
-        type: integer
-        default: 40000000
-      PRODUCT_NAME:
-        description: Fakturownia.pl - your product name
-        type: string
-        default: Usługi informatyczne %s - 160 godzin
-
+  run-script: # job name
+    docker: # Specifies the primary container image,
+      - image: cimg/base:2020.01
     steps:
-      - run: echo "start"
-      - run: echo parameters.YOUR_DOMAIN
-
-workflows:
-  workflow:
-    jobs:
-      - run-script
+      - command: echo $API_TOKEN
+    
+       
+      
