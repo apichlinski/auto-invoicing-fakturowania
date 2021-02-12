@@ -19,4 +19,5 @@ commands:
         type: string
         default: Usługi informatyczne %s - 160 godzin
     steps:
+      - run: echo "start"
       - run: echo parameters.YOUR_DOMAIN
