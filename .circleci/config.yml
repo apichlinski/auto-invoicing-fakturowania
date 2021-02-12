@@ -5,7 +5,7 @@ jobs:
     docker: # Specifies the primary container image,
       - image: cimg/base:2020.01
     steps:
-      - run
+      - run:
         name: Generate invoice
         command: echo $API_TOKEN
     
