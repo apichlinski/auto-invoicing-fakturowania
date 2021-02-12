@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: Generate invoice
-          command: echo $API_TOKEN
+          command: echo "$API_TOKEN"
     
 workflows:
   build_and_test: # name of your workflow
