@@ -1,0 +1,22 @@
+version: 2.1
+commands:
+  run-script:
+    parameters:
+      YOUR_DOMAIN:
+        description: Fakturownia.pl - your domain
+        type: string
+        default: XXXXXXXXXXXXXXXX/your-domain
+      CLIENT_ID:
+        description: Fakturownia.pl - your client id
+        type: integer
+        default: 40000000  
+      PRODUCT_ID:
+        description: Fakturownia.pl - your pruduct id
+        type: integer
+        default: 40000000
+      PRODUCT_NAME:
+        description: Fakturownia.pl - your product name
+        type: string
+        default: Usługi informatyczne %s - 160 godzin
+    steps:
+      - run: echo parameters.YOUR_DOMAIN
